@@ -95,6 +95,10 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sm6150-common/proprietary/vendor/gpu/kbc/unified_kbcs_32.bin:$(TARGET_COPY_OUT_VENDOR)/gpu/kbc/unified_kbcs_32.bin \
     vendor/xiaomi/sm6150-common/proprietary/vendor/gpu/kbc/unified_kbcs_64.bin:$(TARGET_COPY_OUT_VENDOR)/gpu/kbc/unified_kbcs_64.bin \
     vendor/xiaomi/sm6150-common/proprietary/vendor/gpu/kbc/unified_ksqs.bin:$(TARGET_COPY_OUT_VENDOR)/gpu/kbc/unified_ksqs.bin \
+    vendor/xiaomi/sm6150-common/proprietary/vendor/gpu/kbc/sequence_manifest.bin:$(TARGET_COPY_OUT_VENDOR)/gpu/kbc/sequence_manifest.bin \
+    vendor/xiaomi/sm6150-common/proprietary/vendor/gpu/kbc/unified_kbcs_32.bin:$(TARGET_COPY_OUT_VENDOR)/gpu/kbc/unified_kbcs_32.bin \
+    vendor/xiaomi/sm6150-common/proprietary/vendor/gpu/kbc/unified_kbcs_64.bin:$(TARGET_COPY_OUT_VENDOR)/gpu/kbc/unified_kbcs_64.bin \
+    vendor/xiaomi/sm6150-common/proprietary/vendor/gpu/kbc/unified_ksqs.bin:$(TARGET_COPY_OUT_VENDOR)/gpu/kbc/unified_ksqs.bin \
     vendor/xiaomi/sm6150-common/proprietary/vendor/lib/rfsa/adsp/dirac_resource.dar:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/dirac_resource.dar \
     vendor/xiaomi/sm6150-common/proprietary/vendor/lib/rfsa/adsp/misound_karaoke_res.bin:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/misound_karaoke_res.bin \
     vendor/xiaomi/sm6150-common/proprietary/vendor/lib/rfsa/adsp/misound_karaokemix_res.bin:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/misound_karaokemix_res.bin \
@@ -173,8 +177,8 @@ PRODUCT_PACKAGES += \
     libq3dtools_esx \
     vulkan.adreno \
     libC2D2 \
-    libCB \
-    libOpenCL \
+    libVkLayer_q3dtools \
+    libadreno_app_profiles \
     libVkLayer_q3dtools \
     libadreno_app_profiles \
     libadreno_utils \
@@ -184,6 +188,7 @@ PRODUCT_PACKAGES += \
     libcdsp_default_listener \
     libdiag \
     libdsutils \
+    libgpudataproducer \
     libfastcvdsp_stub \
     libfastcvopt \
     libgpudataproducer \
@@ -192,7 +197,6 @@ PRODUCT_PACKAGES += \
     libkcl \
     libkernelmanager \
     libllvm-glnext \
-    libllvm-qcom \
     libmdmdetect \
     libmmosal_vendor \
     libqmi \
@@ -298,8 +302,10 @@ PRODUCT_PACKAGES += \
     lib-rtpsl \
     lib-siputility \
     lib-uceservice \
+    libCB \
     libGPreqcancel \
     libGPreqcancel_svc \
+    libOpenCL \
     libQSEEComAPI \
     libbtnv \
     libcacertclient \
@@ -323,7 +329,10 @@ PRODUCT_PACKAGES += \
     libizat_client_api \
     libizat_core \
     libjnihelper \
+    libkcl \
+    libkernelmanager \
     liblbs_core \
+    libllvm-qcom \
     libloc_api_v02 \
     libloc_socket \
     liblocationservice \
